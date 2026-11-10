@@ -1,0 +1,18 @@
+
+namespace SchoolAdmission.Api.Dtos;
+
+public record CreateClassRequest(string name, int TotalSeats);
+
+public record ClassResponse(
+    string Id, string Name, int TotalSeats, int HealdSeats, int ConfirmedSeats, int AvailableSeats);
+
+public record HoldCreatedResponse(
+    string HoldId, string ClassId, string StudentId, string Status, DateTime ExpiredAt);
+
+public record HoldResponse(
+    string HoldId, string ClassId, string Status, DateTime ExpiresAt);
+
+public record ConfirmResponse(string HoldId, string Status);
+
+public record MyHoldResponse(
+    string HoldId, string ClassId, string ClassName, string Status, DateTime ExpiresAt);
