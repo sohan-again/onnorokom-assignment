@@ -1,8 +1,11 @@
 using Microsoft.AspNetCore.Mvc;
 
+using SchoolAdmission.Api.Data;
+
 namespace SchoolAdmission.Api.Controllers;
 
-public class HoldsController: ControllerBase
+[ApiController]
+public class HoldsController(AppDbContext db): ControllerBase
 {
     [HttpPost("classes/{classId}/holds")]
     public Task<IActionResult> Create(string classId, [FromHeader(Name = "X-Student-Id")] string studentId)
