@@ -1,7 +1,7 @@
 
 namespace SchoolAdmission.Api.Dtos;
 
-public record CreateClassRequest(string name, int TotalSeats);
+public record CreateClassRequest(string Name, int TotalSeats);
 
 public record ClassResponse(
     string Id, string Name, int TotalSeats, int HealdSeats, int ConfirmedSeats, int AvailableSeats);
