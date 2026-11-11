@@ -4,10 +4,10 @@ namespace SchoolAdmission.Api.Dtos;
 public record CreateClassRequest(string Name, int TotalSeats);
 
 public record ClassResponse(
-    string Id, string Name, int TotalSeats, int HealdSeats, int ConfirmedSeats, int AvailableSeats);
+    string Id, string Name, int TotalSeats, int HeldSeats, int ConfirmedSeats, int AvailableSeats);
 
 public record HoldCreatedResponse(
-    string HoldId, string ClassId, string StudentId, string Status, DateTime ExpiredAt);
+    string HoldId, string ClassId, string StudentId, string Status, DateTime ExpiresAt);
 
 public record HoldResponse(
     string HoldId, string ClassId, string Status, DateTime ExpiresAt);
